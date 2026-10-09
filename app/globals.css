@@ -1,25 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #070b10;
+  --foreground: #ededed;
+  --accent: #2dd4bf;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --animate-drift-a: drift-a 12s ease-in-out infinite;
+  --animate-drift-b: drift-b 16s ease-in-out infinite;
+  --animate-drift-c: drift-c 20s ease-in-out infinite;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(14vw, 10vh) scale(1.15);
+  }
+  66% {
+    transform: translate(-12vw, 6vh) scale(0.95);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-16vw, -12vh) scale(1.1);
+  }
+  66% {
+    transform: translate(-6vw, 8vh) scale(0.9);
+  }
+}
+
+@keyframes drift-c {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(12vw, -14vh) scale(0.9);
+  }
+  66% {
+    transform: translate(18vw, 10vh) scale(1.15);
+  }
 }
