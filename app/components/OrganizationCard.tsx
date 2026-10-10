@@ -3,7 +3,7 @@ import Image from "next/image";
 export type Position = {
   title: string;
   dates?: string;
-  description: string;
+  bullets: string[];
 };
 
 export type Organization = {
@@ -18,9 +18,7 @@ type OrganizationCardProps = {
   organization: Organization;
 };
 
-export default function OrganizationCard({
-  organization,
-}: OrganizationCardProps) {
+export default function OrganizationCard({organization,}: OrganizationCardProps) {
   return (
     <details className="group rounded-2xl border border-foreground/10 bg-foreground/5 backdrop-blur">
       <summary className="flex cursor-pointer items-center gap-4 rounded-2xl p-4 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground [&::-webkit-details-marker]:hidden">
@@ -65,9 +63,11 @@ export default function OrganizationCard({
                 <p className="text-sm text-foreground/60">{position.dates}</p>
               )}
             </div>
-            <p className="mt-1 leading-7 text-foreground/70">
-              {position.description}
-            </p>
+            <ul className="mt-2 list-disc space-y-1.5 pl-5 leading-7 text-foreground/70">
+              {position.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>

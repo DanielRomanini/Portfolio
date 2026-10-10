@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const iconClass = "size-6";
 
 const links = [
@@ -32,8 +30,8 @@ const links = [
     ),
   },
   {
-    label: "Resume",
-    href: "/resume",
+    label: "Resume (PDF)",
+    href: "/RomaniniDeBarros_Daniel_Resume.pdf",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -63,21 +61,15 @@ export default function SocialLinks() {
     <ul className="flex items-center gap-5">
       {links.map((link) => (
         <li key={link.href}>
-          {link.href.startsWith("/") ? (
-            <Link href={link.href} aria-label={link.label} className={linkClass}>
-              {link.icon}
-            </Link>
-          ) : (
-            <a
-              href={link.href}
-              aria-label={link.label}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linkClass}
-            >
-              {link.icon}
-            </a>
-          )}
+          <a
+            href={link.href}
+            aria-label={link.label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            {link.icon}
+          </a>
         </li>
       ))}
     </ul>
