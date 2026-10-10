@@ -43,7 +43,3 @@ next-env.d.ts
 # personal notes
 notes.txt
 connections.txt
-
-# Resume PDF: held back until the copy without the phone number is saved.
-# Remove these lines then, so the PDF can be committed.
-/public/RomaniniDeBarros_Daniel_Resume.pdf
