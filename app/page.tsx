@@ -6,8 +6,8 @@ export default function Home() {
       <Image
         src="/headshot.jpg"
         alt="Daniel Romanini de Barros"
-        width={504}
-        height={537}
+        width={224}
+        height={224}
         preload
         className="size-44 rounded-full object-cover ring-4 ring-accent sm:size-56"
       />
@@ -18,7 +18,7 @@ export default function Home() {
         Computer Science Student at UCF
       </p>
       <p className="mt-4 max-w-xl text-lg leading-8 text-foreground/60">
-        Building toward software engineering internships.
+        I’m Daniel. I study Computer Science at UCF and work at Lockheed Martin. The rest of my time goes to side projects, jiu-jitsu, and skiing.
       </p>
     </div>
   );
