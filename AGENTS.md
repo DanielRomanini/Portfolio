@@ -49,7 +49,7 @@ Personal portfolio site for Daniel Romanini de Barros, a CS student at UCF who i
 - Make focused changes. Don't rewrite files or restructure the project unless I ask.
 - If there are a few reasonable ways to do something, give me the options and a recommendation instead of silently picking one.
 - When I'm debugging, help me understand the cause, not just the fix.
-- Always update `notes.txt` whenever you change the project, so it stays an accurate, plain-language record of what's been built and why. It's gitignored, for my own reference.
+- Update `notes.txt` and `connections.txt` only for important information: what was built, why, and how it works (new files, components and concepts, and how files connect). Skip content and status details, like which clubs are listed or what is still a placeholder. Both files are gitignored, for my own reference.
 
 ## Site plan
 
